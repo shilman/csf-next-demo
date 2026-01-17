@@ -1,6 +1,8 @@
-import type { Preview } from '@storybook/react-vite'
+import addonA11y from "@storybook/addon-a11y";
+import addonDocs from "@storybook/addon-docs";
+import { definePreview } from "@storybook/react-vite";
 
-const preview: Preview = {
+export default definePreview({
   parameters: {
     controls: {
       matchers: {
@@ -16,6 +18,6 @@ const preview: Preview = {
       test: 'todo'
     }
   },
-};
 
-export default preview;
+  addons: [addonDocs(), addonA11y()]
+});

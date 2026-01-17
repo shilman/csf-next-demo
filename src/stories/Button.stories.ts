@@ -1,44 +1,42 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import preview from '../../.storybook/preview';
 
 import { fn } from 'storybook/test';
 
 import { Button } from './Button';
 
-const meta = {
+const meta = preview.meta({
   component: Button,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+});
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Primary: Story = {
+export const Primary = meta.story({
   args: {
     primary: true,
     label: 'Button',
+    backgroundColor: 'red',
   },
-};
+});
 
-export const Secondary: Story = {
+export const Secondary = meta.story({
   args: {
     label: 'Button',
   },
-};
+});
 
-export const Large: Story = {
+export const Large = meta.story({
   args: {
     size: 'large',
     label: 'Button',
   },
-};
+});
 
-export const Small: Story = {
+export const Small = meta.story({
   args: {
     size: 'small',
     label: 'Button',
   },
-};
+});
