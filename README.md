@@ -1,5 +1,7 @@
 # CSF Next Sample
 
+[![CSF Next demo vieeo](image.png)](https://www.youtube.com/watch?v=UWqAKHL9AqY)
+
 The code used in a [demo video for CSF Next](https://www.youtube.com/watch?v=UWqAKHL9AqY), demonstrating:
 
 - [Typesafe CSF factories](https://github.com/storybookjs/storybook/discussions/30112)
